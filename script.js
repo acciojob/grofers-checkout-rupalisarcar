@@ -4,10 +4,10 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-	let priceAll = document.querySelectorAll(".price");
+	let priceAll = document.querySelectorAll(".prices");
 	let totalPrice = 0;
 	priceAll.forEach(item=>totalPrice+=parseInt(item.innerText));
-	console.log(totalPrice);
+	
 	const newRow= document.createElement('tr');
 	const firstCol = document.createElement('td')
 	firstCol.innerText = "Total Price";
@@ -17,7 +17,9 @@ const getSum = () => {
 	newRow.appendChild(firstCol);
 	newRow.appendChild(secCol);
 
-	document.body.appendChild(newRow)
+	let table = document.getElementsByTagName("table")[0]
+
+	table.appendChild(newRow)
   
 };
 
