@@ -11,6 +11,7 @@ const getSum = () => {
 	const newRow= document.createElement('tr');
 	const firstCol = document.createElement('td')
 	firstCol.innerText = "Total Price";
+	firstCol.setAttribute("id", ans)
 	const secCol = document.createElement('td')
 	secCol.innerText = `${totalPrice}`
 
